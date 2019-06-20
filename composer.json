@@ -9,6 +9,6 @@
             "email": "feifeifanye@hotmail.com"
         }
     ],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "require": {}
 }
