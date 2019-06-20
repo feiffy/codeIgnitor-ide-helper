@@ -92,7 +92,7 @@ class CI_Controller extends my_models
  * @property CI_Image_lib $image_lib              Image Manipulation class
  * @property CI_Input $input                      Pre-processes global input data for security
  * @property CI_Lang $lang                        Language Class
- * @property Che300_Loader $load                      Loads views and files
+ * @property CI_Loader $load                      Loads views and files
  * @property CI_Log $log                          Logging Class
  * @property CI_Model $model                      CodeIgniter Model Class
  * @property CI_Output $output                    Responsible for sending final output to browser
