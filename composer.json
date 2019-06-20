@@ -1,0 +1,14 @@
+{
+    "name": "feiffy/codeignitor-ide-helper",
+    "description": "for enable phpstorm code completion",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "feiffy song",
+            "email": "feifeifanye@hotmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
