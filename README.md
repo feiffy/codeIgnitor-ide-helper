@@ -6,8 +6,7 @@ used for Phpstorm，enable auto-completion for CI's dynamic property and CI mode
 
 ``` sh
 $ composer install feiffy/codeignitor
-$ cd vendor/feiffy/bin
-$ php make.php
+$ php vendor/feiffy/codeignitor-ide-helper/src/bin/make.php
 # auto-generating models and CI's property docs, 
 # ...
 # finished, and enabled your phpstorm code auto-completion.
