@@ -16,3 +16,6 @@ In phpstorm, marked your CI projects `system` as **Excluded** by right click `sy
 All is finished, and your phpstorm code auto-completion is enabled.
 
 Enjoy your coding!
+
+## TODO
+* support namespace
