@@ -5,9 +5,10 @@
 
 static $my_models = " *\n";
 
-$app_path = dirname(dirname(dirname(dirname(dirname(dirname(__FILE__)))))) . '/application/models';
+$app_path = dirname(dirname(dirname(dirname(dirname(dirname(__FILE__)))))) . '/application';
+$app_model_path = $app_path . '/models';
 
-work($app_path, $my_models);
+work($app_model_path, $my_models);
 
 $my_models_tpl = <<<MY_MODELS_TPL
 <?php die();
@@ -32,7 +33,8 @@ class my_models
 
 MY_MODELS_TPL;
 
-$filename = dirname(dirname(__FILE__)) . '/my_models.php';
+# $filename = dirname(dirname(__FILE__)) . '/my_models.php';
+$filename = $app_path . '/my_models.php';
 file_put_contents($filename, $my_models_tpl);
 
 function work($file, &$my_models)
