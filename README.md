@@ -19,3 +19,4 @@ Enjoy your coding!
 
 ## TODO
 * support namespace
+* remove duplicated models
