@@ -17,6 +17,12 @@ All is finished, and your phpstorm code auto-completion is enabled.
 
 Enjoy your coding!
 
+### make new model
+
+``` bash
+$ php vendor/feiffy/codeignitor-ide-helper/src/bin/make.php your_db_name your_table_name
+```
+
 ## TODO
 * support namespace
 * remove duplicated models
