@@ -23,7 +23,7 @@ $new_model_tpl = <<<NEW_MODEL_TPL
  * @author 
  * @created_at {$created_at}
  */
-class {$model_classs_name}_model extends Che300_Model
+class {$model_classs_name}_model extends Base_Model
 {
     const TABLE_NAME = '{$table_name}';
     public function __construct()

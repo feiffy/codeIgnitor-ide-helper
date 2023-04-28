@@ -33,8 +33,8 @@ class my_models
 
 MY_MODELS_TPL;
 
-# $filename = dirname(dirname(__FILE__)) . '/my_models.php';
-$filename = $app_path . '/my_models.php';
+$filename = dirname(dirname(__FILE__)) . '/my_models.php';
+# $filename = $app_path . '/my_models.php';
 file_put_contents($filename, $my_models_tpl);
 
 function work($file, &$my_models)
