@@ -4,11 +4,12 @@
 # AUTO-GENERATING MY_MODELS
 
 static $my_models = " *\n";
+static $all_models = [];
 
 $app_path = dirname(dirname(dirname(dirname(dirname(dirname(__FILE__)))))) . '/application';
 $app_model_path = $app_path . '/models';
 
-work($app_model_path, $my_models);
+work($app_model_path, $my_models, $all_models);
 
 $my_models_tpl = <<<MY_MODELS_TPL
 <?php die();
@@ -37,7 +38,7 @@ $filename = dirname(dirname(__FILE__)) . '/my_models.php';
 # $filename = $app_path . '/my_models.php';
 file_put_contents($filename, $my_models_tpl);
 
-function work($file, &$my_models)
+function work($file, &$my_models, &$all_models)
 {
     if (is_dir($file)) {
         $list = scandir($file);
@@ -46,12 +47,15 @@ function work($file, &$my_models)
             if ($item == '..') continue;
             $item = $file . '/' . $item;
             if (is_dir($item)) { // 目录，继续向下遍历
-                work($item, $my_models);
+                work($item, $my_models, $all_models);
             } else { // 文件，则判断是否PHP，cd
 
                 if (pathinfo($item, PATHINFO_EXTENSION) == 'php') {
                     $model_name = get_model_name($item);
-                    $my_models .= " * @property $model_name $model_name\n";
+                    if (!in_array($model_name, $all_models)) {
+                        $all_models[] = $model_name;
+                        $my_models .= " * @property $model_name $model_name\n";
+                    }
                 }
             }
         }
